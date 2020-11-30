@@ -17,15 +17,17 @@ class AppDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_app_details)
-        val packageName=intent.extras?.get("package")
-        supportActionBar?.elevation=0f
-        val appName=findViewById<TextView>(R.id.appName)
-        val appLogo=findViewById<ImageView>(R.id.appLogo)
-        appName.text=packageName.toString()
-        Glide.with(this).load(packageManager.getApplicationIcon(packageName.toString())).into(appLogo)
-        val tabLayout=findViewById<TabLayout>(R.id.tabLayout)
+        val packageName = getPackageNameFromIntent()
+
+        supportActionBar?.elevation = 0f
+        val appName = findViewById<TextView>(R.id.appName)
+        val appLogo = findViewById<ImageView>(R.id.appLogo)
+        appName.text = packageName.toString()
+        Glide.with(this).load(packageManager.getApplicationIcon(packageName.toString()))
+            .into(appLogo)
+        val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         tabLayout.setTabTextColors(Color.parseColor("#808080"), Color.parseColor("#ffffff"))
-        val viewPager2=findViewById<ViewPager2>(R.id.viewPager)
+        val viewPager2 = findViewById<ViewPager2>(R.id.viewPager)
         viewPager2.adapter = FragmentsAdapter(this)
         TabLayoutMediator(tabLayout, viewPager2) { tab, position ->
             if (position == 0) {
@@ -35,7 +37,11 @@ class AppDetailsActivity : AppCompatActivity() {
             }
 
         }.attach()
-
-
     }
+
+    private fun getPackageNameFromIntent(): String {
+        return intent.extras?.get("package").toString()
+    }
+
+
 }
