@@ -32,9 +32,8 @@ class PermissionFragment : Fragment() {
             rev.layoutManager=LinearLayoutManager(activity,LinearLayoutManager.VERTICAL,false)
         }
         else{
-            Toast.makeText(activity,"Null",Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity,"No Permission is assigned",Toast.LENGTH_SHORT).show()
         }
-
         return view
     }
 
