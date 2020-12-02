@@ -1,2 +1,2 @@
-# ApkExtractor
-![Screenshot_2020-12-02-18-33-34-194_com example apkextractor](https://user-images.githubusercontent.com/53398805/100876628-a7051400-34cd-11eb-8e16-1bcd8825dad1.png)![Screenshot_2020-12-02-18-33-29-856_com example apkextractor](https://user-images.githubusercontent.com/53398805/100876660-b08e7c00-34cd-11eb-9a27-faa36a7cb678.png)![Screenshot_2020-12-02-18-33-14-705_com example apkextractor](https://user-images.githubusercontent.com/53398805/100876670-b3896c80-34cd-11eb-91e5-46091f159e13.png)
+#ApkExtractor
+![image](https://user-images.githubusercontent.com/53398805/100877841-5d1d2d80-34cf-11eb-91b2-33e7677c70c1.png)
